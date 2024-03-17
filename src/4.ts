@@ -36,7 +36,7 @@ class MyHouse extends House {
     super(key);
   }
   openDoor(key: Key): void {
-    if (key === this.key) {
+    if (key.getSignature() === this.key.getSignature()) {
       this.door = true;
       console.log("The door is opened.");
     } else {
